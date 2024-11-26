@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="textColorLight">#000000</color> <!-- white for text -->
+    <color name="backgroundColorLight">#f6f6f8</color> <!-- black for background -->
+    <color name="subTextColorLight">#9A9A9A</color> <!-- light grey for text -->
+    <color name="detailsColorLight">#000000</color> <!-- Example: Black for "Details" in light mode -->
+
+
+    <color name="background_color">#F6F6F8</color>
+    <color name="titlecolor">#000000</color>
+
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey_white1">#9A9A9A</color>
+    <color name="grey_white2">#6C6C6C</color>
+    <color name="blue">#387AFF</color>
+    <color name="grey_bg">#F2F2F2</color>
+    <color name="black2">#575757</color>
+    <color name="cyan">#09E3C4</color>
+    <color name="violet">#8438FF</color>
+    <color name="grey_bar">#D9D9D9</color>
+    <color name="grey_title">#AFAFAF</color>
+
+
+    <color name="black_bg">#343434</color>
+    <color name="black_grey1">#BEBEBE</color>
+    <color name="black_grey2">#3F3F3F</color>
+    <color name="black_grey3">#C6C6C6</color>
+    <color name="black_grey4">#727272</color>
+
+
+    <!-- Checked state colors -->
+    <color name="blurColorChecked">#A6D1E6</color> <!-- Light blue with some transparency -->
+    <color name="blurColorCheckedBorder">@color/blue</color> <!-- Border color for checked -->
+
+    <!-- Unchecked state colors -->
+    <color name="blurColorUnchecked">#E6F2F8</color> <!-- Lighter blue for unchecked -->
+    <color name="blurColorUncheckedBorder">#B0C4DE</color> <!-- Border color for unchecked -->
+
+    <color name="dropDownbg">#fcfcff</color> <!-- Border color for unchecked -->
+
+</resources>

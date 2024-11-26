@@ -1,0 +1,78 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.android.privacyview'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.android.privacyview"
+        minSdk 29
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    androidResources {
+        noCompress 'tflite'
+    }
+    buildFeatures {
+        buildConfig = true
+    }
+    aaptOptions{
+        noCompress("tflite")
+    }
+
+}
+
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+
+    // CameraX
+    implementation 'androidx.camera:camera-core:1.4.0'
+    implementation 'androidx.camera:camera-lifecycle:1.4.0'
+    implementation 'androidx.camera:camera-view:1.4.0'
+    implementation 'androidx.camera:camera-camera2:1.4.0'
+
+    // TensorFlow Lite ML-Kit dependencies
+    implementation 'org.tensorflow:tensorflow-lite:2.13.0'
+    implementation 'org.tensorflow:tensorflow-lite-support:0.4.4'
+
+    implementation 'com.google.mediapipe:tasks-vision:0.20230731'
+    implementation 'com.google.mlkit:face-detection:16.1.7'
+    implementation 'com.google.android.gms:play-services-mlkit-face-detection:17.1.0'
+    implementation 'com.google.mlkit:vision-common:17.3.0'
+
+
+    // Circular Progress Bar
+    implementation 'com.mikhaellopez:circularprogressbar:3.1.0'
+    // CardView
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    // ObjectBox - vector database
+    debugImplementation "io.objectbox:objectbox-android-objectbrowser:4.0.0"
+    releaseImplementation "io.objectbox:objectbox-android:4.0.0"
+
+    implementation 'com.google.code.gson:gson:2.11.0'
+
+}

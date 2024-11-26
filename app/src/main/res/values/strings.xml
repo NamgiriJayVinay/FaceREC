@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Privacy View</string>
+    <string name="secure_privacy">Secure Privacy</string>
+    <string name="privacy_policy_text" translatable="false">
+        <![CDATA[
+            Check our <b><u><font color=\"#000000\">Privacy Notice</u></b> to see how we manage your data.
+             <br>By continuing, you agree to the <b><u><font color=\"#000000\">Terms and Conditions.</u></b>
+        ]]>
+    </string>
+
+    <string name="test_new_security_features" translatable="false">Test new security features</string>
+    <string name="exclusive_access_to_new_features" translatable="false">Get exclusive access to new features before anyone else</string>
+    <string name="share_feedback" translatable="false">Share feedback</string>
+    <string name="become_part_of_development" translatable="false">By sharing feedback about the new features, become part of the development of these exciting new tools</string>
+    <string name="terms_and_conditions" translatable="false">By continuing you agree to the Terms and Conditions</string>
+    <string name="user_testing_consent" translatable="false">
+         <![CDATA[
+                I voluntarily consent to participate in user testing by using this app.<br> <b><u><font color=\"#000000\"> Details </u></b>
+        ]]>
+    </string>
+    <string name="details" translatable="false">Details</string>
+    <string name="text_continue" translatable="false">Continue</string>
+    <string name="device_security_score" translatable="false">Device Security score</string>
+    <string name="experimental_features" translatable="false">Experimental features</string>
+    <string name="privacy_tips" translatable="false">Privacy Tips</string>
+    <string name="secure" translatable="false">Your device is secure</string>
+    <string name="safe" translatable="false">Your device is safe, please review your privacy tips to ensure full security</string>
+    <string name="vulnerable" translatable="false">Your device is vulnerable, please review your privacy tips to prevent risk</string>
+    <string name="at_risk" translatable="false">Your device is at risk, please review your privacy tips to secure your device</string>
+    <string name="critical" translatable="false">Your device score is critically low, please review your privacy tips immediately</string>
+    <string name="viewall" translatable="false">View all</string>
+    <string name="anomalies_detected" translatable="false">Anomaly detected</string>
+    <string name="feedback" translatable="false">Feedback</string>
+    <string name="review_permissions" translatable="false">Review permissions</string>
+    <string name="uninstall" translatable="false">Uninstall</string>
+    <string name="dismiss_alert" translatable="false">Dismiss Alert</string>
+    <string name="uninstall_app_confirmation" translatable="false">Do you want to uninstall this app?</string>
+    <string name="generated_tip" translatable="false">Generated tip</string>
+    <string name="accuracy" translatable="false">Accuracy</string>
+    <string name="clarity" translatable="false">Clarity</string>
+    <string name="comments" translatable="false">Comments (Optional)</string>
+    <string name="submit" translatable="false">Submit</string>
+    <string name="permission_used" translatable="false">Permissions used in</string>
+    <string name="permissions_count" translatable="false">0 Permissions </string>
+    <string name="camera" translatable="false">Camera</string>
+    <string name="microphone" translatable="false">Microphone</string>
+    <string name="location" translatable="false">Location</string>
+    <string name="genai_prompt" translatable="false">you are a assistant who tells what kind of suspicious activity is does by the app based on its states.\n</string>
+    <string name="if_any_permission_anomaly_detected_a_tip_n_will_be_generated_here">If any permission anomaly detected, a tip \n will be generated here</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="permissions">Permissions</string>
+    <string name="asset_number">Asset number</string>
+    <string name="update_now">Update Now</string>
+    <string name="last_7_days">Last 7 days</string>
+    <string name="last_24_hours">Last 24 hours</string>
+    <string name="new_anomaly_found">New Anomaly Found</string>
+    <string name="expand_this_notification_to_know_more">Expand this notification to know more</string>
+    <string name="anomaly_detected">Anomaly Detected</string>
+    <string name="had_anomaly_behaviour_please_review_the_details_for_further_information">" had Anomaly Behaviour. Please review the details for further information."</string>
+    <string name="check">Check</string>
+    <string name="refresh_reports">Refresh reports</string>
+    <string name="today_at">Today at</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="version_1_0">Version 1.0</string>
+    <string name="latest_version_is_installed">Latest version is installed</string>
+    <string name="open_source_licenses">Open Source licenses</string>
+    <string name="terms_and_conditions_str">Terms and Conditions</string>
+    <string name="no_anomalies">No anomalies</string>
+    <string name="secure_your_device_with_privacy_mode_so_that_you_can_only_access_when_privacy_view_mode_is_enables_your_face_data_is_decured_by_knox">
+        \u2022 Secure your device with Privacy mode so that you can only access, when Privacy View mode is enables. Your face data is Secured by Knox \n \n
+         \u2022 Secure your device with Privacy mode so that you can only access, when Privacy View mode is enables. Your face data is Secured by Knox \n
+    </string>
+
+</resources>
