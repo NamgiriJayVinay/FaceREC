@@ -1,0 +1,80 @@
+private void startCameraPreview() {
+    CameraManager cameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
+    try {
+        // Choose the rear camera (or modify to select front camera if needed)
+        String cameraId = cameraManager.getCameraIdList()[0]; 
+        CameraCharacteristics characteristics = cameraManager.getCameraCharacteristics(cameraId);
+
+        // Get camera preview size
+        StreamConfigurationMap map = characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
+        Size previewSize = map.getOutputSizes(SurfaceTexture.class)[0]; // Select optimal size based on requirements
+
+        // Open camera
+        if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            return; // Handle permission request if not granted
+        }
+
+        cameraManager.openCamera(cameraId, new CameraDevice.StateCallback() {
+            @Override
+            public void onOpened(@NonNull CameraDevice camera) {
+                cameraDevice = camera; // Save cameraDevice for later use
+                createCameraPreviewSession(camera, previewSize);
+            }
+
+            @Override
+            public void onDisconnected(@NonNull CameraDevice camera) {
+                camera.close();
+                cameraDevice = null;
+            }
+
+            @Override
+            public void onError(@NonNull CameraDevice camera, int error) {
+                camera.close();
+                cameraDevice = null;
+            }
+        }, null);
+
+    } catch (CameraAccessException e) {
+        e.printStackTrace();
+    }
+}
+
+
+private void createCameraPreviewSession(CameraDevice cameraDevice, Size previewSize) {
+    try {
+        SurfaceHolder holder = surfaceView.getHolder();
+        holder.setFixedSize(previewSize.getWidth(), previewSize.getHeight());
+
+        // Create a preview surface from the SurfaceView's holder
+        Surface previewSurface = holder.getSurface();
+
+        // Set up a CaptureRequest for the preview
+        CaptureRequest.Builder previewRequestBuilder = cameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
+        previewRequestBuilder.addTarget(previewSurface);
+
+        // Create the camera capture session
+        cameraDevice.createCaptureSession(
+                Collections.singletonList(previewSurface),
+                new CameraCaptureSession.StateCallback() {
+                    @Override
+                    public void onConfigured(@NonNull CameraCaptureSession session) {
+                        try {
+                            CaptureRequest previewRequest = previewRequestBuilder.build();
+                            session.setRepeatingRequest(previewRequest, null, null);
+                        } catch (CameraAccessException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    @Override
+                    public void onConfigureFailed(@NonNull CameraCaptureSession session) {
+                        Log.e("CameraService", "Failed to configure camera");
+                    }
+                },
+                null
+        );
+
+    } catch (CameraAccessException e) {
+        e.printStackTrace();
+    }
+}
